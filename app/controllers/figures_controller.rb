@@ -20,7 +20,7 @@ class FiguresController < ApplicationController
     end
 
   patch '/figures/:id/edit' do
-      @figure = Figure.find(params[:id])
+      @figure = Figure.create(params[:figure])
       if !params[:title][:name].empty?
         @figure.titles << Figure.create(params[:title][:name])
       end
