@@ -1,18 +1,18 @@
 <h4> Person Name: </h4>
 <a href="/figures/<%= @figure.id %>"><%= @figure.name %></a>
 <br></br>
-      <label>Landmarks:</label>
+      <label> Landmarks: </label>
         <%@figure.landmarks.each do |landmark|%>
         <li><%=landmark.name%></li>
         <%end%>
-        
+
         <br></br>
-        
-      <label>Titles: </label>
+
+      <label> Titles: </label>
         <%@figure.titles.each do |title|%>
         <li><%=title.name%></li>
         <%end%>
-        
+
         <br></br>
 
 <a class="button" href="/">Go Home</a>
