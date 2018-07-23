@@ -3,7 +3,8 @@
 
 <%@landmarks.each do |landmark| %>
   <li><a href="/figures/<%=landmark.id%>"><%=landmark.name%></a></li>
-  <%=landmark.year_completed%>
+  <label> Year Completed: </label>
+  -- <%=landmark.year_completed%>
   <%end%>
 
   <h1><a href="/figures"> Go Home </a></h1>
