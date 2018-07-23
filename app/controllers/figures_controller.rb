@@ -33,9 +33,6 @@ class FiguresController < ApplicationController
     end 
 
 
-
-
-
   post '/figures' do
      @figure = Figure.create(params["figure"])
      if !params[:landmark][:name].empty?
