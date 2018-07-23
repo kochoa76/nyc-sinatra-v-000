@@ -15,6 +15,6 @@ class LandmarksController < ApplicationController
 
   get '/landmarks/:id/edit' do
     erb :'/landmarks/edit'
-  end 
+  end
 
 end
