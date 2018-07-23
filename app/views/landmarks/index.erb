@@ -1,10 +1,10 @@
 <h1>Landmark Name</h1>
 <h2> Year Completed </h2>
 
-<%@landmarks.each do |landmark| %>
+<%@landmarks.each do |landmark| %><br> 
   <li><a href="/figures/<%=landmark.id%>"><%=landmark.name%></a></li>
   <label> Year Completed: </label>
   -- <%=landmark.year_completed%>
-  <%end%>
+  <%end%></br>
 
   <h1><a href="/figures"> Go Home </a></h1>
