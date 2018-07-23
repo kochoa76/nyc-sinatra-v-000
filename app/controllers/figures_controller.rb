@@ -19,8 +19,10 @@ class FiguresController < ApplicationController
       erb :'figures/edit'
     end
 
-  patch '/figures/:id/edit' do
-      @figure = Figure.create(params[:figure])
+  post '/figures/:id/' do
+      @figure = Figure.find(params[:id])
+      @figure.update(params[:figure])
+      
       if !params[:title][:name].empty?
         @figure.titles << Figure.create(params[:title][:name])
       end
@@ -31,6 +33,7 @@ class FiguresController < ApplicationController
       @figure.save
       redirect to "/figures/#{@figure.id}"
     end
+
 
 
   post '/figures' do
