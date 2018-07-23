@@ -1,7 +1,7 @@
 <h4> Person Name: </h4>
 <a href="/figures/<%= @figure.id %>"><%= @figure.name %></a>
 <br></br>
-      Landmarks:
+      <label>Landmarks:</label>
         <%@figure.landmarks.each do |landmark|%>
         <li><%=landmark.name%></li>
         <%end%>
