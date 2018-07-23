@@ -1,0 +1,8 @@
+<h1> Edit a Figure: </h1>
+
+<form action="/figures/#{@figure.id}" method="POST">
+
+<%@figure.all.each do |figure| %>
+<label><h4><%=figure.name%></h4></label>
+  <input type="hidden" name="_method" value="PATCH">
+  <%end%>
